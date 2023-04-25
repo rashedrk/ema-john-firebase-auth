@@ -60,3 +60,17 @@
 .btn-submit:hover {
     background: rgba(255, 153, 0, 0.6);
 }
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+.text-error {
+    color: rgba(222, 46, 46, 0.845);
+    margin-left: 10px;
+}
