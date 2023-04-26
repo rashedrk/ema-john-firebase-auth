@@ -25,7 +25,7 @@ const Header = () => {
             {
                 user && 
                 <div>
-                    <span>{user.name}</span> <button onClick={handleSignOut}>sign Out</button>
+                    <span>{user.email}</span> <button onClick={handleSignOut}>sign Out</button>
                 </div>
             }
         </nav>

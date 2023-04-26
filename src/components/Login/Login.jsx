@@ -16,7 +16,9 @@ const Login = () => {
         .then(result => {
             const loggedUser = result.user;
             console.log(loggedUser);
+            form.reset();
         })
+        .catch(err => console.log(err))
     }
     return (
         <div className='form-container'>
