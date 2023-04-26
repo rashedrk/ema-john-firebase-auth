@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProvider/AuthProvider';
 
 const SignUp = () => {
     const [error, setError] = useState('');
+    const {createUser} = useContext(AuthContext);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -18,6 +20,12 @@ const SignUp = () => {
         else if (password.length < 6){
             setError("password must be greater or equal to six digit")
         }
+
+        createUser(email, password)
+        .then(result => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+        })
     }
 
     return (
